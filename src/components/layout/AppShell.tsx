@@ -20,6 +20,7 @@ import {
 } from 'lucide-react';
 import { useHarvestIQ } from '../../context/HarvestIQContext';
 import { DEMO_REFERENCE_DATE, formatDateShort } from '../../utils/calculations';
+import { resolveAssetUrl } from '../common/UIPrimitives';
 
 interface NavItem {
   to: string;
@@ -355,7 +356,7 @@ export const AppShell: React.FC<{ children: React.ReactNode }> = ({ children }) 
               title="Account and Stage 1 settings"
             >
               <img
-                src="/src/assets/images/avatar_farmer_profile_1795755919713.jpg"
+                src={resolveAssetUrl('/src/assets/images/avatar_farmer_profile_1795755919713.jpg')}
                 alt="Subham Mohanty"
                 referrerPolicy="no-referrer"
                 className="h-6 w-6 rounded-full object-cover"

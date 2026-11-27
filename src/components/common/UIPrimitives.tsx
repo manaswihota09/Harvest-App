@@ -179,6 +179,17 @@ export const ConfirmDialog: React.FC<{
   </Modal>
 );
 
+export function resolveAssetUrl(src: string): string {
+  if (!src) return src;
+  if (src.startsWith('/src/assets/')) {
+    const base = import.meta.env.BASE_URL.endsWith('/')
+      ? import.meta.env.BASE_URL
+      : `${import.meta.env.BASE_URL}/`;
+    return `${base}${src.replace(/^\/+/, '')}`;
+  }
+  return src;
+}
+
 export const SafeImage: React.FC<{
   src: string;
   alt: string;
@@ -186,8 +197,9 @@ export const SafeImage: React.FC<{
   fallbackTitle?: string;
 }> = ({ src, alt, className = '', fallbackTitle }) => {
   const [errored, setErrored] = useState(false);
+  const resolvedSrc = resolveAssetUrl(src);
 
-  if (errored || !src) {
+  if (errored || !resolvedSrc) {
     return (
       <div
         className={`flex flex-col items-center justify-center bg-[#E8F0E8] text-[#153F32] ${className}`}
@@ -206,7 +218,7 @@ export const SafeImage: React.FC<{
 
   return (
     <img
-      src={src}
+      src={resolvedSrc}
       alt={alt}
       referrerPolicy="no-referrer"
       onError={() => setErrored(true)}
