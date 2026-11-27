@@ -1,0 +1,8 @@
+{
+  "name": "HARVESTIQ",
+  "description": "Integrated IoT and AI-powered vertical farming and predictive harvest intelligence platform. Stage 1 frontend prototype focused on hydroponic lettuce cultivation.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

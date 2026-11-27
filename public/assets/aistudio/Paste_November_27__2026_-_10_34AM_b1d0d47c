@@ -1,0 +1,1493 @@
+# HARVESTIQ – ULTIMATE MASTER DEVELOPMENT PROMPT
+## Integrated IoT & AI-Powered Vertical Farming and Predictive Harvest Intelligence Platform
+
+Act as a senior AgriTech product architect, UI/UX designer, frontend architect, full-stack engineer and AI/ML systems developer.
+
+Your task is to develop **HARVESTIQ**, a premium, professional and functional digital platform for vertical farming intelligence.
+
+The project must be developed with a clear long-term architecture, exceptional user experience, realistic functionality and a technically credible implementation strategy.
+
+The application must not be limited to a static landing page or a generic agricultural dashboard. It should evolve into a unified digital ecosystem connecting farm operators, vertical farming infrastructure providers and existing sensor manufacturers.
+
+---
+
+# 1. PROJECT IDENTITY
+
+**Product Name:** HARVESTIQ
+
+**Tagline:** From Growing to Knowing.
+
+**Product Category:** AgriTech / Smart Agriculture / Vertical Farming / Crop Intelligence
+
+**Project Title:** AI-Enabled Integrated Vertical Farming and Crop Intelligence Platform
+
+**Initial Crop Focus:** Hydroponic lettuce
+
+**Initial Market:** India
+
+**Initial Validation Context:** Odisha
+
+**Primary Users:**
+- Commercial hydroponic farm owners.
+- Vertical farm operators.
+- Farm managers.
+- Infrastructure manufacturers.
+- Sensor and IoT device manufacturers.
+
+### Core Product Vision
+
+HARVESTIQ is a software-first, hardware-agnostic platform that connects existing vertical farming infrastructure and sensor technologies with intelligent crop management.
+
+It enables farmers to discover compatible devices, automatically collect environmental data, monitor crop development, identify unusual growth patterns, estimate crop maturity and plan upcoming harvests.
+
+Its central purpose is to help growers understand:
+
+1. How their crops are developing.
+2. Whether growing conditions are deviating from configured ranges.
+3. When individual crop batches are likely to mature.
+4. What harvest quantities may be expected when sufficient data is available.
+5. What requires attention.
+6. How to plan harvesting more effectively.
+
+**Core positioning:**
+
+"An integrated IoT and AI-powered vertical farming platform that connects existing infrastructure providers, sensor manufacturers and farm operators through a unified digital ecosystem. It automates farm-data collection and transforms crop and environmental information into actionable growth insights and predictive harvest management."
+
+### Core Three-Pillar Strategy
+
+**CONNECT**
+
+Bring existing vertical farming infrastructure providers and sensor manufacturers onto one digital platform. Enable farmers to discover products and identify technically compatible devices.
+
+**AUTOMATE**
+
+Allow farmers to connect their existing supported sensors and automatically receive environmental and nutrient-related readings without repeatedly entering measurements manually.
+
+**INTELLIGENTLY MANAGE**
+
+Analyse crop information, environmental conditions and historical growth and harvest records to generate crop intelligence, alerts, maturity estimates and harvest-planning insights.
+
+The platform must remain hardware-agnostic. Do not design it around proprietary HARVESTIQ sensors or assume farmers must purchase new hardware.
+
+---
+
+# 2. DEVELOPMENT STRATEGY – THREE STAGES
+
+Develop the platform in three clearly separated stages.
+
+## STAGE 1 – COMPLETE FRONTEND DEVELOPMENT
+
+**Current execution instruction: Execute Stage 1 only.**
+
+Build a complete, responsive, interactive frontend using structured demonstration data.
+
+Do not start implementing the production backend, database infrastructure, actual manufacturer integrations or trained ML models unless explicitly instructed later.
+
+The Stage 1 frontend must be complete enough to demonstrate the product to hackathon judges.
+
+## STAGE 2 – BACKEND AND DATABASE INTEGRATION
+
+When explicitly instructed, implement:
+
+- Backend APIs.
+- User authentication and role-based access.
+- PostgreSQL database.
+- Farm, rack, zone and batch management.
+- Partner and product management.
+- Device registry.
+- Sensor-data ingestion.
+- MQTT and REST integrations.
+- Historical sensor records.
+- Zone-based device assignments.
+- Automatic batch-data association.
+- Harvest record management.
+
+## STAGE 3 – AI/ML ENGINE AND VALIDATION
+
+When explicitly instructed, implement:
+
+- Environmental intelligence.
+- Growth trend analysis.
+- Anomaly detection.
+- Crop maturity prediction.
+- Harvest-window estimation.
+- Yield estimation where suitable labels exist.
+- Model evaluation.
+- Validation against actual crop and harvest records.
+
+Do not confuse frontend demonstration calculations with actual machine-learning predictions.
+
+### Important execution rule
+
+Maintain the architecture so that Stage 1 components can later connect to real backend services and AI models without requiring the entire application to be rewritten.
+
+Do not proceed beyond the currently authorised stage.
+
+---
+
+# 3. FIRST ACTION – INSPECT THE EXISTING PROJECT
+
+Before writing code:
+
+1. Inspect the current working directory.
+2. Identify the existing framework and dependencies.
+3. Inspect the folder structure and existing components.
+4. Identify whether a project already exists.
+5. Examine existing design and configuration.
+6. Identify errors and incomplete implementation.
+7. Preserve useful existing work.
+8. Avoid deleting or overwriting files without understanding their purpose.
+
+If the directory is empty, initialise a new project using the recommended frontend stack.
+
+Create a concise implementation plan before development.
+
+Maintain a `CLAUDE.md` file containing:
+
+- Project overview.
+- Product vision.
+- Technology stack.
+- Folder structure.
+- Design system.
+- Development conventions.
+- Current development stage.
+- Important implementation decisions.
+- Commands for running and testing the application.
+- Outstanding tasks and known limitations.
+
+---
+
+# 4. TECHNOLOGY STACK
+
+## Stage 1 – Frontend
+
+Use:
+
+- Next.js with App Router.
+- React.
+- TypeScript.
+- Tailwind CSS.
+- Recharts for charts and analytics.
+- Lucide React for icons.
+- shadcn/ui where useful for accessible UI components.
+
+Use stable, compatible package versions.
+
+Use reusable React components, strict TypeScript interfaces and modular architecture.
+
+Do not use Python, FastAPI or PostgreSQL during Stage 1.
+
+## Stage 2 – Backend and Data
+
+Use:
+
+- Python.
+- FastAPI.
+- PostgreSQL.
+- REST APIs.
+- MQTT broker such as Mosquitto.
+- Webhooks and manufacturer-specific API adapters.
+
+## Stage 3 – AI and Analytics
+
+Use:
+
+- Python.
+- Scikit-learn.
+- XGBoost where sufficient data supports its use.
+- Appropriate data preprocessing and model evaluation libraries.
+
+## Future Cloud Deployment
+
+Use AWS or another suitable cloud provider, depending on project requirements and cost considerations.
+
+Do not introduce unnecessary infrastructure during the initial prototype.
+
+---
+
+# 5. DESIGN SYSTEM AND VISUAL IDENTITY
+
+Create HARVESTIQ as a premium AgriTech SaaS product.
+
+The design should feel like a professionally funded agricultural technology startup.
+
+### Colour Palette
+
+- Primary Forest Green: `#153F32`
+- Secondary Green: `#287A55`
+- Soft Sage: `#E8F0E8`
+- Background: `#F7F9F5`
+- White: `#FFFFFF`
+- Primary Text: `#202923`
+- Secondary Text: `#78847D`
+- Warm Accent: `#D7A65B`
+
+Use restrained status colours:
+
+- Green: Healthy / Positive.
+- Amber: Attention / Approaching maturity.
+- Red: Critical / Requires inspection.
+- Grey: Inactive / Historical.
+
+### Typography
+
+Use a clean, modern sans-serif typeface with consistent hierarchy for:
+
+- Page headings.
+- Section headings.
+- Card titles.
+- Labels.
+- Metrics.
+- Supporting descriptions.
+
+### Design Principles
+
+- Premium agricultural technology aesthetic.
+- Clean navigation and information hierarchy.
+- Balanced whitespace.
+- Subtle shadows and borders.
+- Consistent iconography.
+- High-quality charts.
+- Responsive layouts.
+- Professional agricultural imagery.
+- Clear farmer-friendly language.
+
+Avoid:
+
+- Generic AI-generated dashboards.
+- Excessive gradients.
+- Neon green interfaces.
+- Unnecessary animations.
+- Excessively rounded cards.
+- Overcrowded screens.
+- Decorative charts without meaningful data.
+- Unprofessional agricultural clipart.
+- Inconsistent typography and spacing.
+
+Prioritise readability and meaningful information over decoration.
+
+---
+
+# 6. APPLICATION USER ROLES
+
+Design the application around three main user roles.
+
+## A. Farmer / Farm Operator
+
+Farmers should eventually be able to:
+
+- Register and manage farms.
+- Configure racks, levels and growing zones.
+- Discover compatible infrastructure and sensor products.
+- Connect existing supported devices.
+- View device connectivity and health.
+- Create and manage crop batches.
+- View automatically collected sensor readings.
+- Monitor crop development.
+- Receive crop-growth insights and alerts.
+- View predicted harvest windows.
+- Maintain actual harvest records.
+- Review farm analytics.
+
+## B. Infrastructure / Hardware Partner
+
+Manufacturers should eventually be able to:
+
+- Register their company.
+- Create a manufacturer profile.
+- List vertical farming infrastructure products.
+- Add product descriptions, specifications and images.
+- List racks, hydroponic systems, nutrient circulation systems, irrigation equipment and complete vertical farming setups.
+- Provide technical documentation.
+- Manage product listings.
+- Receive farmer enquiries.
+
+## C. Sensor / IoT Partner
+
+Sensor companies should eventually be able to:
+
+- Register their company.
+- Create sensor product listings.
+- Specify sensor types and measurement units.
+- Provide device specifications.
+- Specify connectivity methods.
+- Submit API documentation and integration details.
+- View integration and compatibility status.
+
+### Important distinction
+
+Product listing and technical integration are separate.
+
+A product must not automatically be labelled compatible merely because a manufacturer lists it.
+
+Compatibility must be technically verified.
+
+For Stage 1, use clearly labelled demonstration partner profiles and products. Do not invent actual partnerships or verified integrations.
+
+---
+
+# 7. APPLICATION STRUCTURE AND NAVIGATION
+
+Create the following application routes:
+
+1. `/` – Landing page.
+2. `/dashboard` – Main farm overview.
+3. `/farms` – Farm management.
+4. `/zones` – Rack, level and growing-zone management.
+5. `/batches` – Crop batch management.
+6. `/batches/[id]` – Individual crop batch details.
+7. `/predictions` – Harvest readiness and predictions.
+8. `/environment` – Environmental monitoring.
+9. `/devices` – Device registry and connectivity.
+10. `/partners` – Manufacturer and product ecosystem.
+11. `/harvest` – Harvest scheduling and history.
+12. `/alerts` – Alert management.
+13. `/analytics` – Farm analytics and reports.
+14. `/settings` – Farm and application settings.
+
+All pages must have consistent navigation and visual styling.
+
+Use a persistent desktop sidebar and compact top navigation.
+
+For mobile, use a responsive navigation drawer or suitable mobile navigation pattern.
+
+---
+
+# 8. LANDING PAGE
+
+Create a polished marketing website introducing HARVESTIQ.
+
+### Hero Section
+
+Brand: HARVESTIQ
+
+Headline:
+
+"Grow Smarter. Harvest Better."
+
+Supporting description:
+
+"Predictive intelligence for the next generation of vertical farming. Connect existing farm technologies, monitor crop growth, forecast harvest readiness and make data-driven farming decisions."
+
+Primary CTA: Explore Dashboard.
+
+Secondary CTA: Discover How It Works.
+
+Include a high-quality visual featuring a modern indoor vertical hydroponic lettuce farm with subtle data-oriented visual elements.
+
+### Additional Sections
+
+1. Problem identification.
+2. HARVESTIQ's proposed solution.
+3. Connect, Automate and Intelligently Manage.
+4. Core crop intelligence capabilities.
+5. How the platform works.
+6. Hardware and sensor partner ecosystem.
+7. Benefits for farmers.
+8. Partner registration section.
+9. Farmer registration and login entry points.
+10. Footer.
+
+Use appropriate imagery, restrained motion and clear typography.
+
+Do not make the landing page unnecessarily long.
+
+---
+
+# 9. FARM MANAGEMENT AND GROWING-ZONE CONFIGURATION
+
+Create a farmer dashboard with:
+
+- Total registered farms.
+- Number of growing zones.
+- Active crop batches.
+- Connected sensor devices.
+- Devices requiring attention.
+- Upcoming harvest forecasts.
+- Recent alerts.
+
+Allow farmers to:
+
+- Create a farm.
+- Edit farm information.
+- Add growing racks.
+- Add rack levels.
+- Create individual growing zones.
+- Edit zone configurations.
+
+Use the hierarchy:
+
+**Farm → Rack → Level → Growing Zone**
+
+The interface should clearly display which crop batches and devices are associated with each growing zone.
+
+For Stage 1, implement functional local demonstration interactions.
+
+---
+
+# 10. PARTNER AND PRODUCT ECOSYSTEM
+
+Create a product discovery section where manufacturers can showcase existing products.
+
+Separate products into two major categories.
+
+### Infrastructure Products
+
+- Vertical farming racks.
+- Hydroponic growing systems.
+- Nutrient circulation systems.
+- Irrigation equipment.
+- Complete vertical farming setups.
+
+### Sensors and IoT Devices
+
+- Temperature sensors.
+- Humidity sensors.
+- PAR/light sensors.
+- pH sensors.
+- EC sensors.
+- Water temperature sensors.
+- Water-level sensors.
+- Water-flow sensors.
+- CO₂ sensors.
+- Cameras and crop-monitoring equipment.
+
+Each product listing should contain:
+
+- Manufacturer name.
+- Product name.
+- Product image.
+- Product category.
+- Description.
+- Technical specifications.
+- Measurement units, where relevant.
+- Connectivity methods.
+- Integration status.
+- Manufacturer contact information or enquiry option.
+
+Provide filters for:
+
+- Product type.
+- Manufacturer.
+- Sensor category.
+- Compatibility status.
+
+Use the following compatibility labels:
+
+- Compatible and verified.
+- Integration available.
+- Integration under review.
+- Not currently supported.
+
+Never invent actual manufacturers, product specifications, partnerships or verified compatibility.
+
+For Stage 1, use clearly labelled demonstration listings.
+
+---
+
+# 11. DEVICE REGISTRY AND SENSOR INTEGRATION
+
+This is a major part of the long-term HARVESTIQ architecture.
+
+HARVESTIQ must support existing third-party sensors instead of requiring farmers to purchase proprietary devices.
+
+### Future Integration Methods
+
+Design the architecture to support:
+
+1. Manufacturer REST APIs.
+2. MQTT messaging.
+3. HTTPS data ingestion.
+4. Webhooks.
+5. Future gateway and industrial protocol adapters.
+
+Potential future gateway protocols include Modbus and LoRaWAN, depending on supported hardware.
+
+### Device Registry
+
+Maintain the following information:
+
+- Device ID.
+- Manufacturer.
+- Product model.
+- Sensor type.
+- Measurement unit.
+- Farm assignment.
+- Growing-zone assignment.
+- Connection method.
+- Connection status.
+- Last received reading.
+- Last communication timestamp.
+- Calibration information, if available.
+
+Device statuses:
+
+- Connected.
+- Offline.
+- No recent data.
+- Authentication error.
+- Integration pending.
+
+Future farmer actions should include:
+
+- Add an existing compatible device.
+- Connect through an authorised manufacturer account or supported gateway.
+- Register a device using its ID and supported credentials.
+- Assign the device to a growing zone.
+- View incoming readings.
+- Disconnect or reassign devices.
+
+Never expose API keys, passwords or device secrets in the user interface.
+
+### Stage 1 Requirements
+
+Build the device registry interface using structured demonstration data.
+
+Allow users to:
+
+- View registered devices.
+- View sensor types.
+- View device status.
+- View last received reading.
+- Assign demonstration devices to growing zones.
+- Reassign or disconnect demonstration devices.
+
+Clearly label simulated devices and readings.
+
+Do not claim that actual hardware integration exists unless implemented and tested.
+
+---
+
+# 12. AUTOMATIC SENSOR DATA COLLECTION – FUTURE ARCHITECTURE
+
+Different manufacturers may provide sensor readings in different formats and units.
+
+Create a future integration architecture using manufacturer-specific adapters that standardise readings into one internal data structure.
+
+Example:
+
+```json
+{
+  "device_id": "TEMP-001",
+  "farm_id": "FARM-001",
+  "zone_id": "RACK-A-LEVEL-2",
+  "sensor_type": "temperature",
+  "value": 23.5,
+  "unit": "celsius",
+  "timestamp": "2026-11-27T09:30:00+05:30",
+  "data_quality": "valid"
+}
+```
+
+The eventual data-ingestion system should:
+
+- Receive readings automatically.
+- Validate incoming data.
+- Standardise units.
+- Store timestamps.
+- Identify duplicate or invalid readings.
+- Detect missing or stale data.
+- Associate readings with the correct device and growing zone.
+- Maintain historical sensor records.
+- Support secure authentication and encrypted communication.
+- Handle temporary connection interruptions where supported.
+
+### Important Technical Limitation
+
+A sensor cannot connect merely because it measures a relevant variable. It must provide an accessible and authorised API, MQTT endpoint, gateway or documented communication interface.
+
+Some manufacturers may require their own cloud platforms and partner credentials.
+
+Do not assume universal plug-and-play compatibility.
+
+### Stage 1 Requirements
+
+Use deterministic, clearly labelled simulated sensor readings.
+
+Prepare service interfaces and data structures so actual manufacturer API and MQTT integrations can be implemented in Stage 2.
+
+Do not implement real hardware integrations during Stage 1.
+
+---
+
+# 13. CROP BATCH MANAGEMENT
+
+Create a complete crop batch management interface.
+
+Initial crop: Lettuce.
+
+Allow farmers to register batches with essential information:
+
+- Crop name.
+- Variety.
+- Planting date.
+- Growing zone.
+- Batch identifier.
+- Plant count, where available.
+
+Example:
+
+- Crop: Lettuce.
+- Variety: Romaine.
+- Batch: L-001.
+- Planting date: 27 November 2026.
+- Growing zone: Rack A, Level 2.
+
+Display:
+
+- Batch ID.
+- Crop variety.
+- Growing zone.
+- Rack number.
+- Planting date.
+- Crop age.
+- Plant count.
+- Growth stage.
+- Predicted harvest window.
+- Estimated yield, only when supported.
+- Current status.
+
+Provide:
+
+- Search.
+- Filtering.
+- Sorting.
+- Batch creation.
+- Batch editing.
+- Batch deletion with confirmation.
+- Batch detail navigation.
+
+Create a professional registration form with input validation.
+
+Use realistic sample lettuce batches at different growth stages.
+
+### Critical Sensor-to-Zone-to-Batch Mapping
+
+Sensors should normally be assigned to physical growing zones, not permanently to individual crop batches.
+
+Use this hierarchy:
+
+**Farm → Rack → Level → Growing Zone → Assigned Sensors**
+
+Crop batches occupy zones over a period of time.
+
+For example:
+
+- Rack A, Level 2 contains devices TEMP-001 and PH-001.
+- Lettuce Batch L-001 occupies the zone during one crop cycle.
+- After harvesting, Batch L-002 occupies the same zone.
+
+The platform must maintain historical zone assignments and batch occupancy so that sensor readings are associated with the correct batch during the correct period.
+
+Do not permanently attach a sensor to one crop batch.
+
+For Stage 1, demonstrate this association using local sample data.
+
+---
+
+# 14. INDIVIDUAL CROP BATCH DETAILS
+
+Create an informative batch profile page.
+
+Include:
+
+- Batch information.
+- Growth timeline.
+- Plant height progression, where available.
+- Leaf count progression, where available.
+- Environmental history.
+- Harvest prediction.
+- Estimated yield, where supported.
+- Anomaly alerts.
+- Prediction history.
+- Actual harvest records.
+
+Create a prominent harvest prediction card containing:
+
+- Estimated harvest date.
+- Expected harvest window.
+- Days remaining.
+- Current growth stage.
+- Prediction uncertainty.
+- Data completeness.
+- Key factors influencing the prediction.
+
+Clearly mark all initial predictions as demonstration data.
+
+Do not invent actual plant measurements when none exist. Clearly label sample measurements.
+
+---
+
+# 15. AI CROP INTELLIGENCE ENGINE
+
+Design the future AI architecture around four major capabilities.
+
+## A. Environmental Intelligence
+
+Analyse available readings such as:
+
+- Temperature.
+- Relative humidity.
+- Light intensity / PAR.
+- CO₂, when available.
+- pH.
+- Electrical conductivity (EC).
+- Water temperature.
+
+Identify patterns and deviations from configured crop-specific operating ranges.
+
+Do not assume that one universal set of environmental ranges applies to every lettuce variety and growing setup.
+
+## B. Growth Intelligence
+
+Combine available environmental information with:
+
+- Crop variety.
+- Planting date.
+- Crop age.
+- Historical growth observations.
+- Plant images, when available.
+- Plant measurements, when available.
+
+Estimate crop development and growth trends.
+
+## C. Predictive Harvest Intelligence
+
+Estimate likely crop maturity and harvest windows.
+
+Show:
+
+- Estimated days remaining.
+- Predicted harvest window.
+- Prediction uncertainty.
+- Data completeness.
+- Factors contributing to the prediction.
+
+Use harvest windows rather than presenting one guaranteed harvest date.
+
+Only estimate harvest quantity when suitable historical harvest-weight labels are available.
+
+## D. Operational Intelligence
+
+Convert analytics into understandable recommendations.
+
+Examples:
+
+"Temperature readings in Rack A have been consistently higher than the configured operating range. Inspect the cooling and ventilation system."
+
+"Batch L-001 is approaching its estimated harvest window. Review the crop before scheduling harvest."
+
+Clearly distinguish between:
+
+- Sensor faults.
+- Environmental deviations.
+- Possible growth concerns.
+- Harvest-readiness estimates.
+
+Do not claim definitive disease, nutrient deficiency or crop-health diagnoses from environmental readings alone.
+
+### AI Implementation Strategy
+
+Initially use transparent rule-based alerts and a baseline crop-maturity prediction approach.
+
+Future ML models may include Scikit-learn models or XGBoost, provided sufficient suitable labelled data exists.
+
+Actual harvest dates and harvest weights are important for model training and validation.
+
+Synthetic data may demonstrate the workflow but must not be used to claim real-world model performance.
+
+### Stage 1 Requirements
+
+Create a convincing prediction interface with illustrative demonstration predictions.
+
+Keep demonstration calculations separate from future ML services.
+
+Display a visible notice:
+
+**"DEMONSTRATION MODEL – NOT VALIDATED WITH REAL FARM DATA"**
+
+Never label a basic date calculation as a trained AI model.
+
+---
+
+# 16. HARVEST PREDICTION INTERFACE
+
+This should be one of the visual and functional centrepieces of HARVESTIQ.
+
+Create:
+
+- Harvest readiness distribution.
+- Batch-wise harvest forecasts.
+- Predicted harvest calendar.
+- Maturity timeline.
+- Expected yield by date, when supported.
+- Prediction uncertainty ranges.
+- Prediction history.
+
+Group batches by maturity status:
+
+- Early Growth.
+- Vegetative Growth.
+- Approaching Maturity.
+- Ready for Harvest.
+
+Use configurable criteria rather than arbitrary fixed crop-age assumptions.
+
+Provide batch and zone filters.
+
+Allow users to open individual predictions for further information.
+
+Every prediction must be clearly labelled as demonstration or validated, according to its actual status.
+
+---
+
+# 17. ENVIRONMENTAL MONITORING
+
+Create an environmental monitoring page featuring:
+
+- Temperature in °C.
+- Relative humidity in %.
+- Light intensity / PAR.
+- pH.
+- Electrical conductivity (EC).
+- Water temperature.
+- CO₂, where available.
+
+Include:
+
+- Current readings.
+- Historical trends.
+- Zone-wise comparisons.
+- Environmental alerts.
+- Data freshness indicators.
+- Missing-data warnings.
+- Correlation with crop-growth observations, where suitable data exists.
+
+Use realistic, deterministic sample time-series data.
+
+Clearly label simulated sensor readings.
+
+Do not implement automated irrigation or claim actual hardware connectivity during Stage 1.
+
+---
+
+# 18. HARVEST MANAGEMENT
+
+Create a dedicated harvest management interface.
+
+Include:
+
+- Upcoming harvests.
+- Harvest calendar.
+- Completed harvests.
+- Batch-wise harvest history.
+- Expected versus actual harvest outcomes.
+
+Allow users to:
+
+- Mark a batch as harvested.
+- Enter actual harvest date.
+- Enter actual harvested weight.
+- Enter number of harvested plants.
+- Add harvest notes.
+
+Validate all input values.
+
+Preserve actual harvest records for future model training and validation.
+
+---
+
+# 19. ALERT MANAGEMENT
+
+Create an alert centre for:
+
+- Sensor disconnection.
+- Missing readings.
+- Stale data.
+- Abnormal environmental readings.
+- Unusual growth trends.
+- Potential irrigation interruptions, where relevant data supports this.
+- Approaching harvest windows.
+
+Each alert should include:
+
+- Alert type.
+- Affected farm and zone.
+- Related batch, if applicable.
+- Time of occurrence.
+- Severity.
+- Explanation.
+- Suggested action.
+- Read/unread status.
+
+Clearly distinguish sensor faults from possible crop-growth concerns.
+
+---
+
+# 20. FARM ANALYTICS AND REPORTING
+
+Create a professional analytics page.
+
+Include:
+
+- Crop growth comparisons.
+- Zone performance.
+- Yield forecasting, where supported.
+- Predicted versus actual harvest dates.
+- Predicted versus actual yield.
+- Environmental trends.
+- Batch history.
+- Model evaluation section.
+
+Do not fabricate model accuracy.
+
+If no actual validation data exists, display:
+
+"Model evaluation will become available after sufficient actual harvest records have been collected."
+
+Provide functional CSV export where appropriate.
+
+---
+
+# 21. DASHBOARD DESIGN AND FUNCTIONALITY
+
+Build the main farmer dashboard with persistent sidebar navigation and compact top navigation.
+
+### Sidebar
+
+- Overview.
+- Farms and Zones.
+- Crop Batches.
+- Harvest Predictions.
+- Environment.
+- Devices.
+- Partner Products.
+- Harvest Management.
+- Analytics.
+- Alerts.
+- Settings.
+
+### Top Navigation
+
+Include:
+
+- Current farm name.
+- Current date.
+- Search or quick navigation.
+- Notifications.
+- User profile.
+
+### Dashboard KPI Cards
+
+Display:
+
+1. Active Crop Batches.
+2. Growing Zones.
+3. Approaching Harvest.
+4. Connected Sensor Devices.
+5. Estimated Upcoming Yield, where supported.
+6. Batches Requiring Attention.
+
+### Dashboard Visualisations
+
+Include meaningful visualisations for:
+
+- Crop growth overview.
+- Predicted harvest timeline.
+- Yield forecast, where supported.
+- Zone-wise crop distribution.
+- Environmental trends.
+- Device connectivity.
+- Recent alerts.
+- Upcoming harvest schedule.
+
+Every chart must use meaningful data, labels, units and tooltips.
+
+Do not create charts merely to fill empty space.
+
+### Dashboard Interactions
+
+Implement:
+
+- Date-range filters.
+- Zone filters.
+- Batch filters.
+- Clickable batch cards.
+- Navigation to detailed pages.
+- Interactive chart tooltips.
+- Functional notifications.
+
+All displayed metrics must derive from the current dataset and respond to relevant filters.
+
+---
+
+# 22. DATABASE DESIGN – STAGE 2
+
+Prepare the future relational database architecture around the following entities:
+
+- `users`
+- `partners`
+- `partner_products`
+- `device_models`
+- `farms`
+- `growing_zones`
+- `devices`
+- `device_connections`
+- `device_assignments`
+- `sensor_readings`
+- `crop_batches`
+- `batch_zone_history`
+- `growth_observations`
+- `predictions`
+- `alerts`
+- `harvest_records`
+
+Ensure:
+
+- A farm can contain multiple racks and zones.
+- A zone can contain multiple devices.
+- A device can be assigned to a zone.
+- Device assignments retain historical information.
+- Crop batches occupy zones over defined periods.
+- Sensor readings can be associated with the correct batch using historical zone occupancy.
+- Actual harvest records remain available for model validation.
+
+Use proper relationships, timestamps, validation and role-based permissions.
+
+Do not implement the database during Stage 1.
+
+---
+
+# 23. STAGE 1 – MOCK DATA ARCHITECTURE
+
+Use structured local demonstration data.
+
+Do not scatter hardcoded values throughout individual components.
+
+Create a central data layer containing:
+
+- Farm data.
+- Growing zones.
+- Racks and levels.
+- Lettuce batches.
+- Device records.
+- Partner profiles.
+- Product listings.
+- Growth observations.
+- Environmental readings.
+- Harvest predictions.
+- Yield forecasts.
+- Anomaly alerts.
+- Harvest history.
+
+Create separate files for:
+
+- Types and interfaces.
+- Mock datasets.
+- Data access functions.
+- Calculation utilities.
+- Formatting utilities.
+- Service abstractions.
+
+Use TypeScript interfaces for:
+
+- Crop batches.
+- Farms.
+- Growing zones.
+- Devices.
+- Partners.
+- Products.
+- Environmental readings.
+- Growth observations.
+- Harvest predictions.
+- Yield forecasts.
+- Anomaly alerts.
+- Harvest records.
+
+Use a service abstraction so components access data through functions rather than importing mock arrays directly.
+
+Prepare the architecture for replacing mock services with real API services in Stage 2.
+
+Use deterministic demonstration data rather than randomly changing values on every page load.
+
+Implement local persistence for demonstration interactions where appropriate.
+
+---
+
+# 24. STAGE 1 – FRONTEND CALCULATIONS
+
+Implement simple, transparent demonstration calculations where meaningful.
+
+Examples:
+
+- Crop age from planting date.
+- Days remaining until an illustrative harvest date.
+- Total active batches.
+- Batch distribution by growing zone.
+- Device connectivity counts.
+- Total estimated yield, only when sample assumptions are clearly stated.
+- Predicted harvest distribution by date.
+- Difference between predicted and actual yield where records exist.
+
+Keep demonstration prediction logic separate from actual ML functionality.
+
+Never label a basic date calculation as an AI model.
+
+---
+
+# 25. FUNCTIONALITY REQUIREMENTS
+
+All visible controls must work.
+
+Implement:
+
+- Navigation.
+- Search.
+- Filters.
+- Sorting.
+- Form submissions.
+- Input validation.
+- Modal dialogs.
+- Confirmation dialogs.
+- Batch CRUD interactions.
+- Farm and zone management interactions.
+- Demonstration device assignment.
+- Partner/product listing interactions.
+- Chart tooltips.
+- CSV exports.
+- Harvest status updates.
+- Local persistence where appropriate.
+
+Include:
+
+- Loading states where relevant.
+- Empty states.
+- Error messages.
+- Success feedback.
+- Responsive navigation.
+- Accessible forms.
+
+Do not leave placeholder buttons or dead navigation links.
+
+For any future functionality that cannot be implemented in Stage 1, clearly indicate that it is planned rather than pretending it works.
+
+---
+
+# 26. RESPONSIVENESS AND ACCESSIBILITY
+
+The website must work across:
+
+- Desktop.
+- Laptop.
+- Tablet.
+- Mobile.
+
+For desktop, prioritise a complete analytical dashboard.
+
+For mobile:
+
+- Use a collapsible sidebar or mobile navigation.
+- Stack KPI cards appropriately.
+- Make tables horizontally usable or transform them into cards.
+- Ensure charts remain readable.
+- Avoid horizontal page overflow.
+- Keep important actions accessible.
+
+Use accessible HTML semantics, readable contrast, keyboard-friendly interactions and properly labelled form controls.
+
+---
+
+# 27. CODE QUALITY AND ARCHITECTURE
+
+Follow these rules:
+
+- Use reusable components.
+- Use strict TypeScript types.
+- Avoid unnecessary dependencies.
+- Avoid oversized components.
+- Separate business logic from UI.
+- Use consistent naming conventions.
+- Maintain clean folder structures.
+- Avoid duplicated code.
+- Keep components maintainable.
+- Handle edge cases.
+- Use accessible HTML semantics.
+- Keep mock services separate from future API services.
+- Keep demonstration calculations separate from future AI services.
+
+Do not suppress TypeScript or build errors simply to make the application run.
+
+---
+
+# 28. STAGE 1 – TESTING AND VERIFICATION
+
+After implementation:
+
+1. Run the development server.
+2. Run TypeScript checks.
+3. Run linting.
+4. Run the production build.
+5. Fix all errors.
+6. Verify all routes.
+7. Test all forms.
+8. Test navigation.
+9. Test filters and sorting.
+10. Test responsive layouts.
+11. Test CSV export.
+12. Test local persistence.
+13. Check for console errors.
+14. Verify that all demonstration labels are visible where required.
+
+Do not claim a test has passed unless it has actually been executed.
+
+---
+
+# 29. DEVELOPMENT EXECUTION ORDER
+
+Execute Stage 1 in the following order.
+
+### PHASE A – PROJECT FOUNDATION
+
+- Inspect repository.
+- Establish project architecture.
+- Install dependencies.
+- Set up global styles.
+- Create the design system.
+- Create shared components.
+- Implement navigation.
+
+### PHASE B – VISUAL FOUNDATION
+
+- Build landing page.
+- Build dashboard layout.
+- Implement sidebar and top navigation.
+- Establish consistent cards, buttons, typography and spacing.
+
+### PHASE C – CORE APPLICATION
+
+- Build farm management.
+- Build growing-zone management.
+- Build crop batch management.
+- Build individual batch details.
+- Build harvest predictions.
+- Build environmental monitoring.
+
+### PHASE D – ECOSYSTEM INTERFACES
+
+- Build device registry.
+- Build demonstration device assignments.
+- Build partner profiles.
+- Build product discovery.
+- Build compatibility status displays.
+
+### PHASE E – FARM INTELLIGENCE
+
+- Build harvest management.
+- Build alert management.
+- Build analytics and reports.
+- Connect pages to central mock data.
+- Implement transparent frontend calculations.
+
+### PHASE F – FUNCTIONALITY
+
+- Implement forms and interactions.
+- Implement filtering and sorting.
+- Implement local persistence.
+- Implement CSV exports.
+- Test navigation and data consistency.
+
+### PHASE G – QUALITY ASSURANCE
+
+- Test every route.
+- Fix errors.
+- Test responsiveness.
+- Check UI consistency.
+- Verify all interactions.
+- Run production build.
+
+At the end of each phase, provide a short implementation summary and identify outstanding issues.
+
+Do not proceed to Stage 2 or Stage 3 without explicit instruction.
+
+---
+
+# 30. REQUIRED END-TO-END DEMONSTRATION
+
+The Stage 1 application must demonstrate a coherent farmer workflow using local demonstration data.
+
+1. A farmer opens the HARVESTIQ application.
+2. The farmer views the virtual vertical farm dashboard.
+3. The farmer creates or views a farm.
+4. The farmer creates Rack A and Rack B.
+5. The farmer creates growing zones.
+6. The farmer views a compatible existing sensor or a clearly labelled simulated device.
+7. The farmer assigns the demonstration device to Rack A.
+8. The farmer creates a lettuce batch in Rack A.
+9. The application displays simulated sensor readings associated with that zone.
+10. The application associates readings with the crop batch using zone and occupancy history.
+11. The dashboard displays environmental trends.
+12. The analytics interface generates understandable demonstration insights.
+13. The farmer views an illustrative harvest window.
+14. The farmer records actual harvest date and weight.
+15. The harvest history and relevant dashboard information update accordingly.
+
+The demonstration must be interactive, not merely represented by static screenshots.
+
+Clearly identify simulated data and prototype predictions.
+
+---
+
+# 31. ACCURACY, TRANSPARENCY AND RESEARCH REQUIREMENTS
+
+These requirements are mandatory.
+
+- Do not fabricate real hardware integrations.
+- Do not claim partnerships with actual manufacturers unless agreements exist.
+- Do not mark products as technically compatible without verification.
+- Clearly label simulated sensor readings.
+- Clearly label prototype predictions.
+- Do not invent AI model accuracy.
+- Do not claim field validation without actual testing.
+- Do not claim guaranteed yield increases, cost savings or water savings.
+- Do not present environmental readings as definitive proof of crop health.
+- Display data freshness and missing-data warnings.
+- Make predictions dependent on available data.
+- Preserve actual harvest records for future validation.
+- Do not invent dataset contents, research publications or findings.
+
+If external datasets are used in a later stage, verify their availability, licence, variables and suitability.
+
+In particular, verify whether any proposed lettuce or hydroponic dataset contains actual harvest dates and harvested weights before using it to support maturity or yield prediction.
+
+Synthetic data may demonstrate application functionality but cannot substantiate real-world performance.
+
+---
+
+# 32. FUTURE AI MODEL VALIDATION
+
+When Stage 3 is authorised, use appropriate evaluation methods.
+
+For harvest-date prediction:
+
+- Mean Absolute Error (MAE) in days.
+- Prediction-window coverage.
+- Prediction-window width.
+
+For yield prediction, when actual harvest-weight labels exist:
+
+- MAE in grams or kilograms.
+- Other appropriate regression metrics.
+
+For anomaly detection, use precision and recall where labelled events are available.
+
+Avoid data leakage by splitting training and testing data by crop batch, crop cycle or experiment rather than randomly splitting individual sensor readings from the same batch.
+
+Do not claim that a model is reliable until it has been evaluated against suitable independent records.
+
+---
+
+# 33. FINAL STAGE 1 DELIVERABLES
+
+At the end of Stage 1, deliver:
+
+1. Complete responsive HARVESTIQ frontend.
+2. Premium landing page.
+3. Functional farmer dashboard.
+4. Complete application navigation.
+5. Farm management interface.
+6. Growing-zone and rack management.
+7. Crop batch management.
+8. Detailed batch profiles.
+9. Harvest prediction interface.
+10. Environmental monitoring.
+11. Device registry.
+12. Demonstration partner and product ecosystem.
+13. Harvest management.
+14. Alert management.
+15. Analytics and reporting.
+16. Structured demonstration datasets.
+17. Reusable component architecture.
+18. Local demonstration persistence.
+19. README documentation.
+20. CLAUDE.md project instructions.
+21. Successful production build.
+
+The frontend must be complete enough to demonstrate HARVESTIQ to hackathon judges without requiring a production backend.
+
+Provide clear instructions for running the project and explain which features are simulated or planned for later stages.
+
+---
+
+# 34. FUTURE STAGE 2 DELIVERABLES
+
+When authorised, deliver:
+
+- FastAPI backend.
+- PostgreSQL database.
+- Database schema and migrations.
+- Authentication and role-based access.
+- Farm, zone and batch APIs.
+- Partner and product APIs.
+- Device registry APIs.
+- MQTT or REST data ingestion.
+- Manufacturer-specific integration adapters.
+- Standardised sensor readings.
+- Historical device-to-zone assignments.
+- Automatic batch association.
+- Alert and harvest-record APIs.
+- API documentation.
+- Environment configuration template.
+- Setup and deployment instructions.
+
+---
+
+# 35. FUTURE STAGE 3 DELIVERABLES
+
+When authorised, deliver:
+
+- Environmental intelligence engine.
+- Growth trend analysis.
+- Rule-based and ML-assisted anomaly detection.
+- Lettuce maturity prediction prototype.
+- Harvest-window estimation.
+- Yield estimation only where supported by labelled records.
+- Prediction uncertainty and data completeness indicators.
+- Model evaluation reports.
+- Validation against actual harvest records.
+- Integration with the application dashboard.
+
+Clearly distinguish prototype performance from validated real-world results.
+
+---
+
+# FINAL PRODUCT PRINCIPLE
+
+HARVESTIQ is not a generic farm-management application, a simple sensor-monitoring dashboard or merely a harvest-date calculator.
+
+It is a **unified vertical farming and predictive crop intelligence ecosystem**.
+
+It connects existing infrastructure and sensor technologies with crop development information, environmental data and historical harvest records to help farmers make better-informed decisions.
+
+Every design and implementation decision must support this central purpose:
+
+**"Help vertical farmers understand how their crops are growing, when they are likely to mature, how much they may harvest and what requires attention."**
+
+The platform should be simple for farmers, technically credible for developers and compelling to investors, industry partners and hackathon judges.
+
+Build a polished product, not just a collection of screens.
+
+Prioritise exceptional UI quality, functional interactions, realistic data, maintainable architecture, transparent predictions and a clear path towards real-world integration.
+
+**CONNECT THE HARDWARE. AUTOMATE THE DATA. UNDERSTAND THE CROP. ANTICIPATE THE HARVEST.**
+
+**HARVESTIQ – FROM GROWING TO KNOWING.**
+
+---
+
+## CURRENT EXECUTION BOUNDARY
+
+**EXECUTE STAGE 1 ONLY: COMPLETE FRONTEND DEVELOPMENT.**
+
+Do not build the production backend, PostgreSQL database, actual sensor integrations or trained AI/ML models yet.
+
+Preserve the architecture and interfaces required for those future stages, and wait for explicit authorisation before proceeding.
